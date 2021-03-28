@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get -qqy update && apt-get -qqy install curl git build-essential wget net-tools bash
+RUN apt-get -qqy update && apt-get -qqy install curl git build-essential wget net-tools bash icu-devtools
 
 RUN wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs
 
