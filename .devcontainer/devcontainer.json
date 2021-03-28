@@ -1,0 +1,7 @@
+{
+	"name": "Lean 4 Container",
+	"context": "..",
+	"dockerFile": "../Dockerfile",
+	"extensions": ["leanprover.lean4", "MS-vsliveshare.vsliveshare-pack"],
+	"remoteUser": "lean"
+}
