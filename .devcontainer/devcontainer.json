@@ -2,6 +2,6 @@
 	"name": "Lean 4 Container",
 	"context": "..",
 	"image": "ghcr.io/mhuisi/lean4-cli-docker-test:main",
-	"extensions": ["leanprover.lean4", "MS-vsliveshare.vsliveshare-pack"],
+	"extensions": ["leanprover.lean4", "ms-vsliveshare.vsliveshare"],
 	"remoteUser": "lean"
 }
