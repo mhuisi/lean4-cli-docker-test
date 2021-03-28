@@ -1,6 +1,5 @@
 FROM ubuntu:focal
 ARG DEBIAN_FRONTEND=noninteractive
-ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
 RUN apt-get -qqy update && apt-get -qqy install curl git build-essential wget net-tools bash icu-devtools 
 
@@ -15,5 +14,6 @@ WORKDIR /home/lean
 RUN curl https://raw.githubusercontent.com/Kha/elan/master/elan-init.sh -o elan-init.sh
 RUN sh ./elan-init.sh --default-toolchain none --no-modify-path -y
 ENV PATH "/home/lean/.elan/bin:$PATH"
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
 RUN elan default leanprover/lean4:nightly
