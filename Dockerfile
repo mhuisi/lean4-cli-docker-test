@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-RUN apt-get -qqy update && apt-get -qqy install curl git build-essential net-tools bash 
+RUN apt-get -qqy update && apt-get -qqy install curl git build-essential wget net-tools bash 
 
 # create lean user
 RUN useradd lean -m -U
