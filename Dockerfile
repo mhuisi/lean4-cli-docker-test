@@ -2,7 +2,7 @@ FROM ubuntu:focal
 ARG DEBIAN_FRONTEND=noninteractive
 ARG DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
-RUN apt-get -qqy update && apt-get -qqy install curl git build-essential wget net-tools bash icu-devtools 
+RUN apt-get -qqy update && apt-get -qqy install curl git build-essential wget net-tools bash libicu icu-devtools 
 
 RUN wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs
 
