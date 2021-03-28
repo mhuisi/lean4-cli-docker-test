@@ -1,8 +1,6 @@
 FROM ubuntu:focal
 
-ARG DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get -qqy update && apt-get -qqy install curl && apt-get -qqy install git && apt-get -qqy install build-essential && apt-get -qqy install icu-devtools
+RUN apt-get -qqy update && apt-get -qqy install curl && apt-get -qqy install git && apt-get -qqy install build-essential
 
 # create lean user
 RUN useradd lean -m -U
