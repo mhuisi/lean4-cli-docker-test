@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-RUN apt-get -qqy update && apt-get -qqy install curl && apt-get -qqy install git && apt-get -qqy install build-essential
+RUN apt-get -qqy update && apt-get -qqy install curl git build-essential net-tools bash 
 
 # create lean user
 RUN useradd lean -m -U
@@ -13,3 +13,5 @@ RUN sh ./elan-init.sh --default-toolchain none --no-modify-path -y
 ENV PATH "/home/lean/.elan/bin:$PATH"
 
 RUN elan default leanprover/lean4:nightly
+
+RUN wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs
